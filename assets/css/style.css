@@ -1,0 +1,28 @@
+.container {
+    background-color: white;
+    border: 2px solid black;
+}
+.heading {
+    background-color: grey;
+    border: 2px solid black;
+}
+.navigation {
+    background-color: lightblue;
+    border: 2px solid black;
+}
+.main {
+    background-color: lightgoldenrodyellow;
+    border: 2px solid black;
+}
+.about {
+    background-color: lavender;
+    border: 2px solid black;
+}
+.information {
+    background-color: lightgreen;
+    border: 2px solid black;
+}
+.footer {
+    background-color: lightcoral;
+    border: 2px solid black;
+}
