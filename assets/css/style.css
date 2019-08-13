@@ -4,10 +4,10 @@ html, body {
 }
 .container {
     background-color: white;
-    height: 99vh;
+    /* height: 99vh; */
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: 120px 60px 1fr 70px;
+    grid-template-rows: 120px 60px 810px 70px;
     grid-template-areas: 
         'header header header'
         'nav nav nav'
@@ -36,6 +36,7 @@ html, body {
     display: grid;
     grid-template-columns: 50px 1fr 1fr 1fr 50px;
     grid-template-rows: 1fr 1fr;
+    grid-row-gap: 5px;
     grid-template-areas:
         '. about about info .'
         '. project project project .';
@@ -59,13 +60,14 @@ html, body {
     height: auto;
     display: grid;
     grid-template-columns: repeat(3, minmax(250px, 1fr));
-    grid-template-rows: 75px 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-gap: 10px;
     grid-template-areas: 
         'title title title'
         'link1 link2 link3';
 }
 .current-project-image {
-    width: 200px;
+    width: 250px;
 }
 .footer {
     background-color: lightcoral;
@@ -103,7 +105,6 @@ html, body {
 
 @media only screen and (max-width: 750px) {
     .container {
-        max-width: 100vw;
         grid-template-columns: auto;
         grid-template-rows: 80px 40px auto 80px;
         grid-template-areas: 
@@ -115,10 +116,19 @@ html, body {
     .main {
         margin: 0;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-rows: 1fr 1fr 2fr;
         grid-template-areas:
         'info'
         'about'
         'project';
+    }
+    .projects {
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 1fr 1fr 1fr;
+        grid-template-areas: 
+        'title'
+        'link1'
+        'link2'
+        'link3';
     }
 }
