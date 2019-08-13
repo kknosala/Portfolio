@@ -16,10 +16,16 @@ html, body {
 }
 .heading {
     background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: header;
 }
 .navigation {
     background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: nav;
 }
 .main {
@@ -29,31 +35,75 @@ html, body {
     grid-area: main;
     display: grid;
     grid-template-columns: 50px 1fr 1fr 1fr 50px;
-    grid-template-rows: 1fr 100px;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
         '. about about info .'
         '. project project project .';
 }
 .about {
     background-color: lavender;
+    padding-left: 10px;
+    padding-right: 10px;
     grid-area: about;
 }
 .information {
     background-color: lightgreen;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     grid-area: info;
 }
 .projects {
     background-color: lightpink;
     grid-area: project;
-
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-template-rows: 75px 1fr;
+    grid-template-areas: 
+        'title title title'
+        'link1 link2 link3';
+}
+.current-project-image {
+    width: 200px;
 }
 .footer {
     background-color: lightcoral;
     grid-area: footer;
 }
+#profile-pic {
+    width: 250px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#project-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: title;
+}
+#project1 {
+    grid-area: link1;
+    justify-self: center;
+    align-self: center;
+    
+}
+#project2 {
+    grid-area: link2;
+    justify-self: center;
+    align-self: center;
+}
+#project3 {
+    grid-area: link3;
+    justify-self: center;
+    align-self: center;
+}
 
 @media only screen and (max-width: 750px) {
     .container {
+        max-width: 100vw;
         grid-template-columns: auto;
         grid-template-rows: 80px 40px auto 80px;
         grid-template-areas: 
