@@ -56,9 +56,44 @@ li {
         'title title title'
         'link1 link2 link3'
 }
+.project-div{
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-color: white;
+}
 .current-project-image {
     width: 250px;
+    height: auto;
+    display: block;
 }
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;    
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+  }
+  .card-hover:hover .overlay {
+    width: 100%;
+  }
+  .overlay-text {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
 .footer {
     background-color: aquamarine;
     grid-area: footer;
@@ -78,19 +113,13 @@ li {
 }
 #project1 {
     grid-area: link1;
-    justify-self: center;
-    align-self: center;
     
 }
 #project2 {
     grid-area: link2;
-    justify-self: center;
-    align-self: center;
 }
 #project3 {
     grid-area: link3;
-    justify-self: center;
-    align-self: center;
 }
 
 @media only screen and (max-width: 750px) {
