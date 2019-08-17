@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    width: 100%;
     margin: 0;
 }
 ul {
@@ -14,74 +15,52 @@ li {
 }
 
 .container {
-    background-color: white;
-    /* height: 99vh; */
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 120px 60px 810px 70px;
-    grid-template-areas: 
-        'header header header'
-        'nav nav nav'
-        'main main main'
-        'footer footer footer';
-}
-.heading {
-    background-color: grey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: header;
-}
-.navigation {
     background-color: lightblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: nav;
-}
-.main {
-    background-color: lightgoldenrodyellow;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    grid-area: main;
+    min-height: 100%;
     display: grid;
     grid-template-columns: 50px 1fr 1fr 1fr 50px;
-    grid-template-rows: 1fr 1fr;
-    grid-row-gap: 5px;
-    grid-template-areas:
-        '. about about info .'
-        '. project project project .';
+    grid-template-rows: 90px 40px 350px auto 50px;
+    grid-template-areas: 
+        'heading heading heading heading heading'
+        'nav nav nav nav nav'
+        '. main main info .'
+        '. project project project .'
+        'footer footer footer footer footer';
 }
+.heading {
+   background-color: grey;
+   grid-area: heading;
+}
+.navigation {
+    background: lightsteelblue;
+    grid-area: nav;
+}
+/* .main {
+   
+} */
 .about {
-    background-color: lavender;
-    padding-left: 10px;
-    padding-right: 10px;
-    grid-area: about;
+    background-color: goldenrod;
+    grid-area: main;
 }
 .information {
-    background-color: lightgreen;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    background-color: lightgrey;
     grid-area: info;
 }
 .projects {
-    background-color: lightpink;
+    background-color: burlywood;
     grid-area: project;
-    height: auto;
     display: grid;
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
-    grid-template-rows: 50px 1fr;
-    grid-gap: 10px;
-    grid-template-areas: 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 30px 300px;
+    grid-template-areas:
         'title title title'
-        'link1 link2 link3';
+        'link1 link2 link3'
 }
 .current-project-image {
     width: 250px;
 }
 .footer {
-    background-color: lightcoral;
+    background-color: aquamarine;
     grid-area: footer;
 }
 #profile-pic {
