@@ -1,145 +1,286 @@
-html, body {
-    height: 100%;
-    margin: 0;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+  background-image: url(../images/beige-tiles.png);
+  background-color: #97deff;
+  color: #777777;
 }
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-} 
-li {
-    float: left;
-    padding: 10px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
-
+li {
+  float: left;
+  padding: 10px;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #777777;
+}
+a:hover {
+  color: teal;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+}
 .container {
-    background-color: white;
-    /* height: 99vh; */
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 120px 60px 810px 70px;
-    grid-template-areas: 
-        'header header header'
-        'nav nav nav'
-        'main main main'
-        'footer footer footer';
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 350px 50px;
+  grid-template-rows: 90px 40px 350px auto 50px;
+  grid-template-areas:
+    "heading heading heading heading heading"
+    "nav nav nav nav nav"
+    ". main main info ."
+    ". project project project ."
+    "footer footer footer footer footer";
 }
 .heading {
-    background-color: grey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: header;
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  background-color: #ffffff;
+  color: teal;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: heading;
 }
 .navigation {
-    background-color: lightblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: nav;
-}
-.main {
-    background-color: lightgoldenrodyellow;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 50px 1fr 1fr 1fr 50px;
-    grid-template-rows: 1fr 1fr;
-    grid-row-gap: 5px;
-    grid-template-areas:
-        '. about about info .'
-        '. project project project .';
+  background-color: #ffffff;
+  border-bottom: 4px solid;
+  border-color: #cccccc;
+  text-decoration: none;
+  color: #666666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: nav;
 }
 .about {
-    background-color: lavender;
-    padding-left: 10px;
-    padding-right: 10px;
-    grid-area: about;
+  background-color: goldenrod;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border: 2px solid;
+  border-color: #cccccc;
+  grid-area: main;
 }
 .information {
-    background-color: lightgreen;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    grid-area: info;
+  background-color: lightgrey;
+  grid-area: info;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border: 2px solid;
+  border-color: #cccccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 }
 .projects {
-    background-color: lightpink;
-    grid-area: project;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
-    grid-template-rows: 50px 1fr;
-    grid-gap: 10px;
-    grid-template-areas: 
-        'title title title'
-        'link1 link2 link3';
+  background-color: burlywood;
+  grid-area: project;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border: 2px solid;
+  border-color: #cccccc;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 30px auto;
+  grid-template-areas:
+    "title title title title"
+    "link1 link2 link3 link4";
+}
+.project-div {
+  justify-self: center;
+  align-self: center;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  border-color: #cccccc;
+  border: 2px solid;
 }
 .current-project-image {
-    width: 250px;
+  width: 250px;
+  height: auto;
+  display: block;
 }
-.footer {
-    background-color: lightcoral;
-    grid-area: footer;
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  background-color: #008cba;
+  overflow: hidden;
+  width: 0;
+  height: 25%;
+  transition: 0.5s ease;
 }
-#profile-pic {
-    width: 250px;
-    border-radius: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.card-hover:hover .overlay {
+  width: 100%;
 }
-#project-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: title;
-}
-#project1 {
-    grid-area: link1;
-    justify-self: center;
-    align-self: center;
-    
-}
-#project2 {
-    grid-area: link2;
-    justify-self: center;
-    align-self: center;
-}
-#project3 {
-    grid-area: link3;
-    justify-self: center;
-    align-self: center;
+.overlay-text {
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.active-modal {
+  display: block;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 400px;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #666666;
+  box-sizing: border-box;
+  border-top: 8px solid;
+  border-color: teal;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: footer;
+}
+#profile-pic {
+  width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px solid teal;
+  grid-area: portimage;
+}
+#portinfo {
+  grid-area: portinfo;
+}
+#project-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: title;
+}
+#project1 {
+  grid-area: link1;
+}
+#project2 {
+  grid-area: link2;
+}
+#project3 {
+  grid-area: link3;
+}
+#project4 {
+  grid-area: link4;
+}
+#pages-link:hover {
+  color: teal;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+}
+#repository-link:hover {
+  color: teal;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+}
 @media only screen and (max-width: 750px) {
-    .container {
-        grid-template-columns: auto;
-        grid-template-rows: 80px 40px auto 80px;
-        grid-template-areas: 
-        'header'
-        'nav'
-        'main'
-        'footer';
-    }
-    .main {
-        margin: 0;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 2fr;
-        grid-template-areas:
-        'info'
-        'about'
-        'project';
-    }
-    .projects {
-        grid-template-columns: 1fr;
-        grid-template-rows: 80px 1fr 1fr 1fr;
-        grid-template-areas: 
-        'title'
-        'link1'
-        'link2'
-        'link3';
-    }
+  .container {
+    grid-template-columns: auto;
+    grid-template-rows: 80px 40px 400px auto auto 40px;
+    grid-template-areas:
+      "heading"
+      "nav"
+      "info"
+      "main"
+      "project"
+      "footer";
+  }
+  .about {
+      margin-right: 0;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr 1fr 1fr 1fr;
+    row-gap: 30px;
+    padding-bottom: 30px;
+    grid-template-areas:
+      "title"
+      "link1"
+      "link2"
+      "link3"
+      "link4";
+  }
+  .overlay {
+      width: 100%;
+  }
+  .modal-content {
+    width: 80%;
+  }
 }
