@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- CSS Link -->
     <link rel="stylesheet" type='text/css' href='assets/css/style.css'>
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Local Javascript -->
+    <script src="assets/javascript/app.js"></script>
     <title>Kurt Knosala Portfolio | About</title>
 </head>
 <body>
@@ -66,7 +70,17 @@
                         </div>
                     </div>
             </div>
-        
+            <div id="myModal" class="modal">
+                <span class="close">×</span>
+                <img class="modal-content" id="modal-image">
+                <div id="caption">
+                    <div><h2><span id="modal-project-title"></span></h2></div>
+                    <div><p><span id="project-description"></span></p></div>
+                    <div><a id="pages-link" target="#"><p>Github Pages</p></a></div>
+                    <div><a id="repository-link" target="#"><p>Github Repository</p></a></div>
+                </div>
+              </div>
+              
         <div class="footer">
             <p>test text</p>
         </div>

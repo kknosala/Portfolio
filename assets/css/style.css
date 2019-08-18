@@ -29,15 +29,18 @@ li {
 }
 .heading {
    background-color: grey;
+   display: flex;
+    justify-content: center;
+    align-items: center;
    grid-area: heading;
 }
 .navigation {
     background: lightsteelblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: nav;
 }
-/* .main {
-   
-} */
 .about {
     background-color: goldenrod;
     grid-area: main;
@@ -71,13 +74,13 @@ li {
 }
 .overlay {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;;
     left: 0;
     right: 0;
     background-color: #008CBA;    
     overflow: hidden;
     width: 0;
-    height: 100%;
+    height: 25%;
     transition: .5s ease;
   }
   .card-hover:hover .overlay {
@@ -94,6 +97,60 @@ li {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
   }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+  }
+
+  .active-modal {
+      display: block;
+  }
+
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 400px;
+    max-width: 700px;
+  }
+
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 .footer {
     background-color: aquamarine;
     grid-area: footer;
@@ -125,29 +182,28 @@ li {
 @media only screen and (max-width: 750px) {
     .container {
         grid-template-columns: auto;
-        grid-template-rows: 80px 40px auto 80px;
+        grid-template-rows: 80px 40px auto auto auto 40px;
         grid-template-areas: 
-        'header'
+        'heading'
         'nav'
-        'main'
-        'footer';
-    }
-    .main {
-        margin: 0;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 2fr;
-        grid-template-areas:
         'info'
-        'about'
-        'project';
+        'main'
+        'project'
+        'footer';
     }
     .projects {
         grid-template-columns: 1fr;
         grid-template-rows: 80px 1fr 1fr 1fr;
+        row-gap: 30px;
+        padding-bottom: 30px;
         grid-template-areas: 
         'title'
         'link1'
         'link2'
         'link3';
     }
+    .modal-content {
+        width: 100%;
+    }
+    
 }
