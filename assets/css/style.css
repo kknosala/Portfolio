@@ -206,6 +206,17 @@ h2 {
   max-width: 700px;
 }
 
+#submit-modal {
+  margin: auto;
+  display: block;
+  width: 400px;
+  max-width: 700px;
+  background-color: white;
+  border: 2px solid #ccc;
+  text-align: center;
+  padding: 5px;
+}
+
 #caption {
   margin: auto;
   display: block;

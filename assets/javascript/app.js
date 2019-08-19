@@ -95,6 +95,9 @@ $(document).ready(function() {
       refMessage: refMessage,
       dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
+
+    $(".modal").addClass("active-modal");
+
   })
 
   $('#contact-submit').click(function(x){
@@ -110,5 +113,13 @@ $(document).ready(function() {
       dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
 
+    $(".modal").addClass("active-modal");
+    
   })
+
+  $('#modal-close').click(function(x){
+    x.preventDefault();
+    $(".modal").removeClass("active-modal");
+  })
+
 });
