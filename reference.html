@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- CSS Link -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+    <!-- Firebase Database SDK-->
+   <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <!-- Local Javascript -->
+    <script src="assets/javascript/app.js"></script>
+    <title>Kurt Knosala Portfolio | Portfolio</title>
+  </head>
+  <body>
+    <div class="port-container">
+      <div class="my-heading">
+        <h1>Kurt Knosala</h1>
+      </div>
+      <div class="navigation">
+        <ul style="list-style-type:none">
+          <li><a href="index.html">About</a></li>
+          <li>|</li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li>|</li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>|</li>
+          <li><a href="reference.html">References</a></li>
+        </ul>
+      </div>
+
+      <div class="ref-display">
+          <div class="ref" id="ref-title">
+              <h2>References</h2>
+          </div>
+          <div class="ref" id="ref1">
+              <h2>Name</h2>
+              <h3>Title</h3>
+              <h3>Relationship</h3>
+              <p>Recommendation</p>
+          </div>
+          <div class="ref" id="ref2">
+                <h2>Name</h2>
+                <h3>Title</h3>
+                <h3>Relationship</h3>
+                <p>Recommendation</p>
+          </div>
+          <div class="ref" id="add-ref">
+            <h2>Add a Reference</h2>
+            <form>
+                    <div class="form-group">
+                      <label for="reference-name">Name</label><br>
+                      <input type="email" class="form-control" id="reference-name" placeholder="First and Last Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="reference-email">Job Title</label><br>
+                        <input type="text" class="form-control" id="reference-title" placeholder="Job Title">
+                    </div>
+                    <div class="form-group">
+                            <label for="reference-rel">Your Relationship to Me (ie. Client)</label><br>
+                            <input type="text" class="form-control" id="reference-rel" placeholder="Client, Coworker, Superviser ..">
+                        </div>
+                    <div class="form-group">
+                      <label for="reference-message">Reference</label><br>
+                      <textarea class="form-control" id="reference-message" rows="8" placeholder="Your Reference Here"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit" style="margin-bottom: 15px;" id="ref-submit">Submit</button>
+                  </form>
+          </div>
+        
+      </div>
+      <div id="myModal" class="modal">
+        <div id="submit-modal">
+          <p>Thank you for your reference! It will be posted after a short review.</p>
+          <button type="submit" class="btn btn-submit" style="margin-bottom: 15px;" id="modal-close">Close</button>
+        </div>
+      </div>
+      <div class="my-footer">
+        <p>Copywrite &copy;</p>
+      </div>
+    </div>
+  </body>
+</html>
