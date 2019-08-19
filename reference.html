@@ -11,7 +11,7 @@
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
     <!-- Firebase Database SDK-->
-   <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <!-- Local Javascript -->
     <script src="assets/javascript/app.js"></script>
     <title>Kurt Knosala Portfolio | Portfolio</title>
@@ -34,49 +34,102 @@
       </div>
 
       <div class="ref-display">
-          <div class="ref" id="ref-title">
-              <h2>References</h2>
-          </div>
-          <div class="ref" id="ref1">
-              <h2>Name</h2>
-              <h3>Title</h3>
-              <h3>Relationship</h3>
-              <p>Recommendation</p>
-          </div>
-          <div class="ref" id="ref2">
-                <h2>Name</h2>
-                <h3>Title</h3>
-                <h3>Relationship</h3>
-                <p>Recommendation</p>
-          </div>
-          <div class="ref" id="add-ref">
-            <h2>Add a Reference</h2>
-            <form>
-                    <div class="form-group">
-                      <label for="reference-name">Name</label><br>
-                      <input type="email" class="form-control" id="reference-name" placeholder="First and Last Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="reference-email">Job Title</label><br>
-                        <input type="text" class="form-control" id="reference-title" placeholder="Job Title">
-                    </div>
-                    <div class="form-group">
-                            <label for="reference-rel">Your Relationship to Me (ie. Client)</label><br>
-                            <input type="text" class="form-control" id="reference-rel" placeholder="Client, Coworker, Superviser ..">
-                        </div>
-                    <div class="form-group">
-                      <label for="reference-message">Reference</label><br>
-                      <textarea class="form-control" id="reference-message" rows="8" placeholder="Your Reference Here"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-submit" style="margin-bottom: 15px;" id="ref-submit">Submit</button>
-                  </form>
-          </div>
-        
+        <div class="ref" id="ref-title">
+          <h2>References</h2>
+        </div>
+        <div class="ref" id="ref1">
+          <h2>Jason Fryman</h2>
+          <h3>Lead Quality Assurance Analyst</h3>
+          <h4>Co-Worker</h4>
+          <i
+            ><p>
+              "Kurt is a dedicated, loyal, and very detail oriented worker, that
+              will be a huge asset to any Company! Kurt brings a wealth of
+              knowledge and is a very self-motivated."
+            </p></i
+          >
+        </div>
+        <div class="ref" id="ref2">
+          <h2>Name</h2>
+          <h3>Title</h3>
+          <h4>Relationship</h4>
+          <p>Recommendation</p>
+        </div>
+        <div class="ref" id="ref3">
+          <h2>Name</h2>
+          <h3>Title</h3>
+          <h4>Relationship</h4>
+          <p>Recommendation</p>
+        </div>
+        <div class="ref" id="add-ref">
+          <h2>Add a Reference</h2>
+          <form>
+            <div class="form-group">
+              <label for="reference-name">Name</label><br />
+              <input
+                type="email"
+                class="form-control"
+                id="reference-name"
+                placeholder="First and Last Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="reference-email">Job Title</label><br />
+              <input
+                type="text"
+                class="form-control"
+                id="reference-title"
+                placeholder="Job Title"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="reference-rel"
+                >Your Relationship to Me (ie. Client)</label
+              ><br />
+              <input
+                type="text"
+                class="form-control"
+                id="reference-rel"
+                placeholder="Client, Coworker, Superviser .."
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="reference-message">Reference</label><br />
+              <textarea
+                class="form-control"
+                id="reference-message"
+                rows="8"
+                placeholder="Your Reference Here"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-submit"
+              style="margin-bottom: 15px;"
+              id="ref-submit"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
       <div id="myModal" class="modal">
         <div id="submit-modal">
-          <p>Thank you for your reference! It will be posted after a short review.</p>
-          <button type="submit" class="btn btn-submit" style="margin-bottom: 15px;" id="modal-close">Close</button>
+          <p>
+            Thank you for your reference! It will be posted after a short
+            review.
+          </p>
+          <button
+            type="submit"
+            class="btn btn-submit"
+            style="margin-bottom: 15px;"
+            id="modal-close"
+          >
+            Close
+          </button>
         </div>
       </div>
       <div class="my-footer">

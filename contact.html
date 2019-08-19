@@ -11,7 +11,7 @@
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
     <!-- Firebase Database SDK-->
-   <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <!-- Local Javascript -->
     <script src="assets/javascript/app.js"></script>
     <title>Kurt Knosala Portfolio | Contact Me</title>
@@ -35,27 +35,60 @@
 
       <div class="contact-display">
         <h2>Contact Me</h2>
-        <hr>
+        <hr />
         <form>
-            <div class="form-group">
-              <label for="contact-name">Name</label><br>
-              <input type="text" class="form-control" id="contact-name" placeholder="First and Last Name">
-            </div>
-            <div class="form-group">
-                <label for="contact-email">Email address</label><br>
-                <input type="email" class="form-control" id="contact-email" placeholder="name@example.com">
-            </div>
-            <div class="form-group">
-              <label for="contact-message">Message</label><br>
-              <textarea class="form-control" id="contact-message" rows="8" placeholder="Please leave a message.."></textarea>
-            </div>
-            <button type="submit" class="btn btn-submit" id="contact-submit"style="margin-bottom: 15px;">Submit</button>
-          </form>
+          <div class="form-group">
+            <label for="contact-name">Name</label><br />
+            <input
+              type="text"
+              class="form-control"
+              id="contact-name"
+              placeholder="First and Last Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email address</label><br />
+            <input
+              type="email"
+              class="form-control"
+              id="contact-email"
+              placeholder="name@example.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label><br />
+            <textarea
+              class="form-control"
+              id="contact-message"
+              rows="8"
+              placeholder="Please leave a message.."
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-submit"
+            id="contact-submit"
+            style="margin-bottom: 15px;"
+          >
+            Submit
+          </button>
+        </form>
       </div>
       <div id="myModal" class="modal">
         <div id="submit-modal">
-          <p>Thank you for reaching out! I will be in contact with you shortly!</p>
-          <button type="submit" class="btn btn-submit" style="margin-bottom: 15px;" id="modal-close">Close</button>
+          <p>
+            Thank you for reaching out! I will be in contact with you shortly!
+          </p>
+          <button
+            type="submit"
+            class="btn btn-submit"
+            style="margin-bottom: 15px;"
+            id="modal-close"
+          >
+            Close
+          </button>
         </div>
       </div>
       <div class="my-footer">

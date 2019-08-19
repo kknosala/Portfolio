@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   var firebaseConfig = {
     apiKey: "AIzaSyA6RjXKIxvGkz7xd6SowJCbPLV7e0KVr2I",
     authDomain: "portfolio-database-3a097.firebaseapp.com",
@@ -59,20 +58,20 @@ $(document).ready(function() {
           "https://github.com/kknosala/unit-4-game"
         );
         break;
-    case "project4":
-            $("#modal-image").attr("src", "assets/images/train.png");
-            $("#modal-project-title").text("Train Scheduler");
-            $("#project-description").text(
-              "The Train scheduler app is designed to help users track when their train will be leaving and to get an general idea of the train\'s schedule. Users can add the trains they would like to see tracked and have the option to remove trains they no longer wish to see."
-            );
-            $("#pages-link").attr(
-              "href",
-              "https://kknosala.github.io/train-schedule/"
-            );
-            $("#repository-link").attr(
-              "href",
-              "https://github.com/kknosala/train-schedule"
-            );
+      case "project4":
+        $("#modal-image").attr("src", "assets/images/train.png");
+        $("#modal-project-title").text("Train Scheduler");
+        $("#project-description").text(
+          "The Train scheduler app is designed to help users track when their train will be leaving and to get an general idea of the train's schedule. Users can add the trains they would like to see tracked and have the option to remove trains they no longer wish to see."
+        );
+        $("#pages-link").attr(
+          "href",
+          "https://kknosala.github.io/train-schedule/"
+        );
+        $("#repository-link").attr(
+          "href",
+          "https://github.com/kknosala/train-schedule"
+        );
         break;
     }
   });
@@ -81,14 +80,22 @@ $(document).ready(function() {
     $(".modal").removeClass("active-modal");
   });
 
-  $('#ref-submit').click(function(x){
+  $("#ref-submit").click(function(x) {
     x.preventDefault();
-    var refName = $('#reference-name').val().trim();
-    var refTitle = $('#reference-title').val().trim();
-    var refRelation = $('#reference-rel').val().trim();
-    var refMessage = $('#reference-message').val().trim();
+    var refName = $("#reference-name")
+      .val()
+      .trim();
+    var refTitle = $("#reference-title")
+      .val()
+      .trim();
+    var refRelation = $("#reference-rel")
+      .val()
+      .trim();
+    var refMessage = $("#reference-message")
+      .val()
+      .trim();
 
-    database.ref('/ReferenceAdd').push({
+    database.ref("/ReferenceAdd").push({
       refName: refName,
       refTitle: refTitle,
       refRelation: refRelation,
@@ -96,30 +103,42 @@ $(document).ready(function() {
       dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
 
+    $("#reference-name").val("");
+    $("#reference-title").val("");
+    $("#reference-rel").val("");
+    $("#reference-message").val("");
+
     $(".modal").addClass("active-modal");
+  });
 
-  })
-
-  $('#contact-submit').click(function(x){
+  $("#contact-submit").click(function(x) {
     x.preventDefault();
-    var conName = $('#contact-name').val().trim();
-    var conEmail = $('#contact-email').val().trim();
-    var conMessage = $('#contact-message').val().trim();
+    var conName = $("#contact-name")
+      .val()
+      .trim();
+    var conEmail = $("#contact-email")
+      .val()
+      .trim();
+    var conMessage = $("#contact-message")
+      .val()
+      .trim();
 
-    database.ref('/ContactAdd').push({
+    database.ref("/ContactAdd").push({
       conName: conName,
       conEmail: conEmail,
       conMessage: conMessage,
       dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
 
-    $(".modal").addClass("active-modal");
-    
-  })
+    $("#contact-name").val("");
+    $("#contact-email").val("");
+    $("#contact-message").val("");
 
-  $('#modal-close').click(function(x){
+    $(".modal").addClass("active-modal");
+  });
+
+  $("#modal-close").click(function(x) {
     x.preventDefault();
     $(".modal").removeClass("active-modal");
-  })
-
+  });
 });

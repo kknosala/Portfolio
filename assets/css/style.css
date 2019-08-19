@@ -286,13 +286,13 @@ h2 {
   margin-top: 20px;
   margin-bottom: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 80px 1fr auto;
   grid-gap: 10px;
-  grid-template-areas: 
-    'title title'
-    'ref1 ref2'
-    'submit submit';
+  grid-template-areas:
+    "title title title"
+    "ref1 ref2 ref3"
+    "submit submit submit";
 }
 .ref {
   background-color: #ffffff;
@@ -332,10 +332,10 @@ h2 {
 }
 #footer-text {
   display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 #profile-pic {
   width: 200px;
@@ -458,14 +458,14 @@ h2 {
       "port6";
   }
   .ref-display {
-    
     grid-template-columns: auto;
     grid-template-rows: auto 1fr auto;
-    grid-template-areas: 
-      'title'
-      'ref1'
-      'ref2'
-      'submit';
+    grid-template-areas:
+      "title"
+      "ref1"
+      "ref2"
+      "ref3"
+      "submit";
   }
 }
 
