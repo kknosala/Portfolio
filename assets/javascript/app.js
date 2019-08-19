@@ -94,6 +94,21 @@ $(document).ready(function() {
       refRelation: refRelation,
       refMessage: refMessage,
       dateAdded: firebase.database.ServerValue.TIMESTAMP
-  });
+    });
+  })
+
+  $('#contact-submit').click(function(x){
+    x.preventDefault();
+    var conName = $('#contact-name').val().trim();
+    var conEmail = $('#contact-email').val().trim();
+    var conMessage = $('#contact-message').val().trim();
+
+    database.ref('/ContactAdd').push({
+      conName: conName,
+      conEmail: conEmail,
+      conMessage: conMessage,
+      dateAdded: firebase.database.ServerValue.TIMESTAMP
+    });
+
   })
 });
