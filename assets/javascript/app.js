@@ -1,4 +1,19 @@
 $(document).ready(function() {
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyA6RjXKIxvGkz7xd6SowJCbPLV7e0KVr2I",
+    authDomain: "portfolio-database-3a097.firebaseapp.com",
+    databaseURL: "https://portfolio-database-3a097.firebaseio.com",
+    projectId: "portfolio-database-3a097",
+    storageBucket: "",
+    messagingSenderId: "415749800871",
+    appId: "1:415749800871:web:9203107525f6343a"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  var database = firebase.database();
+
   $(".project-div").click(function() {
     $(".modal").addClass("active-modal");
     switch (this.id) {
@@ -65,4 +80,20 @@ $(document).ready(function() {
   $(".close").click(function() {
     $(".modal").removeClass("active-modal");
   });
+
+  $('#ref-submit').click(function(x){
+    x.preventDefault();
+    var refName = $('#reference-name').val().trim();
+    var refTitle = $('#reference-title').val().trim();
+    var refRelation = $('#reference-rel').val().trim();
+    var refMessage = $('#reference-message').val().trim();
+
+    database.ref('/ReferenceAdd').push({
+      refName: refName,
+      refTitle: refTitle,
+      refRelation: refRelation,
+      refMessage: refMessage,
+      dateAdded: firebase.database.ServerValue.TIMESTAMP
+  });
+  })
 });

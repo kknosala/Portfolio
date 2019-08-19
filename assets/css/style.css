@@ -111,7 +111,6 @@ h2 {
   grid-area: main;
 }
 .information {
-  background-color: lightgrey;
   grid-area: info;
   padding: 10px;
   margin-top: 20px;
@@ -127,7 +126,6 @@ h2 {
   text-align: center;
 }
 .projects {
-  background-color: burlywood;
   grid-area: project;
   padding: 20px;
   margin-bottom: 20px;
@@ -272,6 +270,44 @@ h2 {
   background-color: #006666;
   border-color: teal;
 }
+.ref-display {
+  grid-area: port-display;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 80px 1fr auto;
+  grid-gap: 10px;
+  grid-template-areas: 
+    'title title'
+    'ref1 ref2'
+    'submit submit';
+}
+.ref {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border: 2px solid;
+  border-color: #cccccc;
+  padding: 10px;
+}
+#ref-title {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ref1 {
+  grid-area: ref1;
+}
+#ref2 {
+  grid-area: ref2;
+}
+#add-ref {
+  grid-area: submit;
+}
+#reference-message {
+  height: 200px;
+}
 .my-footer {
   background-color: #666666;
   box-sizing: border-box;
@@ -409,5 +445,15 @@ h2 {
       "port4"
       "port5"
       "port6";
+  }
+  .ref-display {
+    
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+      'title'
+      'ref1'
+      'ref2'
+      'submit';
   }
 }
