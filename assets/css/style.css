@@ -28,6 +28,9 @@ a:hover {
   transition: all 0.2s ease-in-out;
   transform: scale(1.1);
 }
+h2 {
+  color: teal;
+}
 .container {
   min-height: 100%;
   display: grid;
@@ -64,9 +67,9 @@ a:hover {
   grid-auto-columns: 1fr 1fr 1fr 1fr;
   grid-auto-rows: 30px 1fr 1fr;
   grid-template-areas:
-    'title title title title'
-    'port1 port2 port3 port4'
-    'port5 port6 port7 port8'
+    "title title title title"
+    "port1 port2 port3 port4"
+    "port5 port6 port7 port8";
 }
 .heading {
   font-family: "Georgia", "Times New Roman", Times, serif;
@@ -144,7 +147,7 @@ a:hover {
 }
 .current-project-image {
   width: 250px;
-  height: auto;
+  height: 250px;
   display: block;
 }
 .overlay {
@@ -152,7 +155,7 @@ a:hover {
   bottom: 20px;
   left: 0;
   right: 0;
-  background-color: #008cba;
+  background-color: teal;
   overflow: hidden;
   width: 0;
   height: 25%;
@@ -277,7 +280,19 @@ a:hover {
   grid-area: port3;
 }
 #port4 {
-  grid-area: port4
+  grid-area: port4;
+}
+#port5 {
+  grid-area: port5;
+}
+#port6 {
+  grid-area: port6;
+}
+#port7 {
+  grid-area: port7;
+}
+#port8 {
+  grid-area: port8;
 }
 #pages-link:hover {
   color: teal;
@@ -292,7 +307,7 @@ a:hover {
 @media only screen and (max-width: 750px) {
   .container {
     grid-template-columns: auto;
-    grid-template-rows: 80px 40px 400px auto auto 40px;
+    grid-template-rows: 90px 40px 400px auto auto 40px;
     grid-template-areas:
       "heading"
       "nav"
@@ -302,7 +317,7 @@ a:hover {
       "footer";
   }
   .about {
-      margin-right: 0;
+    margin-right: 0;
   }
   .projects {
     grid-template-columns: 1fr;
@@ -317,9 +332,32 @@ a:hover {
       "link4";
   }
   .overlay {
-      width: 100%;
+    width: 100%;
   }
   .modal-content {
     width: 80%;
+  }
+  .port-container {
+    min-height: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: 90px 40px auto 40px;
+    grid-template-areas:
+      "heading"
+      "nav"
+      "port-display"
+      "footer";
+  }
+  .port-display {
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 30px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 30px;
+    grid-template-areas:
+      "title"
+      "port1"
+      "port2"
+      "port3"
+      "port4"
+      "port5"
+      "port6";
   }
 }
