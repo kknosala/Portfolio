@@ -27,6 +27,12 @@ a:hover {
   color: teal;
   transition: all 0.2s ease-in-out;
   transform: scale(1.1);
+  text-decoration: none;
+}
+h1 {
+  font-size: 72px;
+  font-weight: bold;
+  margin: 0;
 }
 h2 {
   color: teal;
@@ -71,7 +77,7 @@ h2 {
     "port1 port2 port3 port4"
     "port5 port6 port7 port8";
 }
-.heading {
+.my-heading {
   font-family: "Georgia", "Times New Roman", Times, serif;
   background-color: #ffffff;
   color: teal;
@@ -229,7 +235,25 @@ h2 {
   cursor: pointer;
 }
 
-.footer {
+.contact-display {
+  grid-area: port-display;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border: 2px solid;
+  border-color: #cccccc;
+}
+.btn-primary {
+  background-color: teal;
+  border-color: teal;
+}
+.btn-primary:hover {
+  background-color: #006666;
+  border-color: teal;
+}
+.my-footer {
   background-color: #666666;
   box-sizing: border-box;
   border-top: 8px solid;
@@ -239,6 +263,13 @@ h2 {
   justify-content: center;
   align-items: center;
   grid-area: footer;
+}
+#footer-text {
+  display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 #profile-pic {
   width: 200px;
