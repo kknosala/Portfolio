@@ -42,7 +42,7 @@ h2 {
   min-height: 100%;
   display: grid;
   grid-template-columns: 50px 1fr 1fr 350px 50px;
-  grid-template-rows: 90px 40px 350px auto 50px;
+  grid-template-rows: 90px 40px auto auto 50px;
   grid-template-areas:
     "heading heading heading heading heading"
     "nav nav nav nav nav"
@@ -412,6 +412,9 @@ h2 {
       "main"
       "project"
       "footer";
+  }
+  .project-div{
+    margin-bottom: 10px;
   }
   .about {
     margin-right: 0;
