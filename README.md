@@ -1,7 +1,7 @@
 # Portfolio
 This app is the current version of my portfolio. This website is fully mobile responsive.
 ## Link
-kknosala.github.io/Portfolio/
+[Github Pages](kknosala.github.io/Portfolio/)
 
 ## Compenents
 This portfolio was built using the following languages, libraries, and servers.
