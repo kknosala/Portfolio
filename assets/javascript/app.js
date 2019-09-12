@@ -44,33 +44,33 @@ $(document).ready(function() {
         );
         break;
       case "project3":
-        $("#modal-image").attr("src", "assets/images/gempic.jpg");
-        $("#modal-project-title").text("Gem Clicker Game");
+        $("#modal-image").attr("src", "assets/images/bamazon.jpg");
+        $("#modal-project-title").text("Bamazon App");
         $("#project-description").text(
           "The Gem Clicker game is a simple game in which the player will need to meet a certain score by clicking on the available gems. Each gem's value is hidden and they player will have to figure it out by clicking on them."
         );
         $("#pages-link").attr(
           "href",
-          "https://kknosala.github.io/unit-4-game/"
+          "https://kknosala.github.io/bamazon/"
         );
         $("#repository-link").attr(
           "href",
-          "https://github.com/kknosala/unit-4-game"
+          "https://github.com/kknosala/bamazon"
         );
         break;
       case "project4":
-        $("#modal-image").attr("src", "assets/images/train.png");
-        $("#modal-project-title").text("Train Scheduler");
+        $("#modal-image").attr("src", "assets/images/liri.jpg");
+        $("#modal-project-title").text("Liri App");
         $("#project-description").text(
-          "The Train scheduler app is designed to help users track when their train will be leaving and to get an general idea of the train's schedule. Users can add the trains they would like to see tracked and have the option to remove trains they no longer wish to see."
+          "A play on Apple's Siri, LIRI is short for Language Interpretation and Recognition Interface. Liri is a command line node app that takes specific parameters and returns different information depending on the search term used."
         );
         $("#pages-link").attr(
           "href",
-          "https://kknosala.github.io/train-schedule/"
+          "https://kknosala.github.io/liri-node-app/"
         );
         $("#repository-link").attr(
           "href",
-          "https://github.com/kknosala/train-schedule"
+          "https://github.com/kknosala/liri-node-app"
         );
         break;
     }
