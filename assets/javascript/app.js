@@ -59,18 +59,18 @@ $(document).ready(function() {
         );
         break;
       case "project4":
-        $("#modal-image").attr("src", "assets/images/liri.jpg");
-        $("#modal-project-title").text("Liri App");
+        $("#modal-image").attr("src", "assets/images/friendfinder.jpg");
+        $("#modal-project-title").text("Friend Finder");
         $("#project-description").text(
-          "A play on Apple's Siri, LIRI is short for Language Interpretation and Recognition Interface. Liri is a command line node app that takes specific parameters and returns different information depending on the search term used."
+          "The Friend Finder app is designed to help people locate and make friends with new people from all around the world. Users simply need to take the survey on the app and the Friend Finder algorithm will match them with their potential best friend based on the information present in the database."
         );
         $("#pages-link").attr(
           "href",
-          "https://kknosala.github.io/liri-node-app/"
+          "https://agile-plateau-67726.herokuapp.com/"
         );
         $("#repository-link").attr(
           "href",
-          "https://github.com/kknosala/liri-node-app"
+          "https://github.com/kknosala/FriendFinder"
         );
         break;
     }

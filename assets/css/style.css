@@ -71,12 +71,14 @@ h2 {
   border: 2px solid;
   border-color: #cccccc;
   display: grid;
-  grid-auto-columns: 1fr 1fr 1fr 1fr;
-  grid-auto-rows: 30px 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 30px 1fr 1fr 1fr;
+  grid-row-gap: 15px;
   grid-template-areas:
     "title title title title"
     "port1 port2 port3 port4"
-    "port5 port6 port7 port8";
+    "port5 port6 port7 port8"
+    "port9 port10 port11 port12";
 }
 .my-heading {
   font-family: "Georgia", "Times New Roman", Times, serif;
@@ -391,6 +393,9 @@ h2 {
 #port8 {
   grid-area: port8;
 }
+#port9 {
+  grid-area: port9;
+}
 #pages-link:hover {
   color: teal;
   transition: all 0.2s ease-in-out;
@@ -448,9 +453,9 @@ h2 {
       "footer";
   }
   .port-display {
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 30px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    row-gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
     grid-template-areas:
       "title"
       "port1"
@@ -458,7 +463,9 @@ h2 {
       "port3"
       "port4"
       "port5"
-      "port6";
+      "port6"
+      "port8"
+      "port9";
   }
   .ref-display {
     grid-template-columns: auto;
