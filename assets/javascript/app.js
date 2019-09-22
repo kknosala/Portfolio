@@ -32,15 +32,15 @@ $(document).ready(function() {
         );
         break;
       case "project2":
-        $("#modal-image").attr("src", "assets/images/giphy.gif");
-        $("#modal-project-title").text("Giphy Actor Search");
+        $("#modal-image").attr("src", "assets/images/burger.png");
+        $("#modal-project-title").text("Burger MySQL App");
         $("#project-description").text(
-          "The Giphy Actor Search is a platform that can be used to pull up gifs of your favorite actors using the Giphy Api."
+          "This is a burger logger where users are able to enter burgers that they would like to eat and then set them as devoured by click on the correct buttons. This project was created as practice for Handlebars and a home made ORM and follows the MVC design pattern."
         );
-        $("#pages-link").attr("href", "https://kknosala.github.io/GifTastic/");
+        $("#pages-link").attr("href", "https://ancient-headland-77711.herokuapp.com/");
         $("#repository-link").attr(
           "href",
-          "https://github.com/kknosala/GifTastic"
+          "https://github.com/kknosala/burger"
         );
         break;
       case "project3":

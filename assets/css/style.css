@@ -396,6 +396,9 @@ h2 {
 #port9 {
   grid-area: port9;
 }
+#port10 {
+  grid-area: port10;
+}
 #pages-link:hover {
   color: teal;
   transition: all 0.2s ease-in-out;
@@ -454,7 +457,7 @@ h2 {
   }
   .port-display {
     grid-template-columns: 1fr;
-    grid-template-rows: 30px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     row-gap: 20px;
     grid-template-areas:
       "title"
@@ -465,7 +468,8 @@ h2 {
       "port5"
       "port6"
       "port8"
-      "port9";
+      "port9"
+      "port10";
   }
   .ref-display {
     grid-template-columns: auto;
