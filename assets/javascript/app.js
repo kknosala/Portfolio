@@ -19,6 +19,21 @@ $(document).ready(function() {
       case "project1":
         $("#modal-image").attr(
           "src",
+          "assets/images/prod2.png"
+        );
+        $("#modal-project-title").text("Store Front App");
+        $("#project-description").text(
+          "This store front app was designed by a group of 5. The orignal concept is designed for use by colorado dispensaries but can easily be adapted to any store front type. My personal contribution is the entire backend compenet and a large magority of the javascript."
+        );
+        $("#pages-link").attr("href", "https://shrouded-crag-31196.herokuapp.com/");
+        $("#repository-link").attr(
+          "href",
+          "https://github.com/kknosala/High_how_are_you"
+        );
+        break;
+      case "project2":
+        $("#modal-image").attr(
+          "src",
           "assets/images/logo-darkhorse-curate.jpg"
         );
         $("#modal-project-title").text("Darkhorse Movie Search");
@@ -31,7 +46,7 @@ $(document).ready(function() {
           "https://github.com/kknosala/DarkHorse"
         );
         break;
-      case "project2":
+      case "project3":
         $("#modal-image").attr("src", "assets/images/burger.png");
         $("#modal-project-title").text("Burger MySQL App");
         $("#project-description").text(
@@ -41,21 +56,6 @@ $(document).ready(function() {
         $("#repository-link").attr(
           "href",
           "https://github.com/kknosala/burger"
-        );
-        break;
-      case "project3":
-        $("#modal-image").attr("src", "assets/images/bamazon.jpg");
-        $("#modal-project-title").text("Bamazon App");
-        $("#project-description").text(
-          "The Gem Clicker game is a simple game in which the player will need to meet a certain score by clicking on the available gems. Each gem's value is hidden and they player will have to figure it out by clicking on them."
-        );
-        $("#pages-link").attr(
-          "href",
-          "https://kknosala.github.io/bamazon/"
-        );
-        $("#repository-link").attr(
-          "href",
-          "https://github.com/kknosala/bamazon"
         );
         break;
       case "project4":
